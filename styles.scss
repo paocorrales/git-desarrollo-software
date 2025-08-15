@@ -1,0 +1,25 @@
+/*-- scss:defaults --*/
+
+@import url("https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible+Next:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Atkinson+Hyperlegible+Mono");
+
+// fonts
+$font-family-sans-serif: "Atkinson Hyperlegible Next", Helvetica, sans-serif !default;
+$font-family-monospace: "Atkinson Hyperlegible Mono", monospace;
+$headings-font-family: "Atkinson Hyperlegible Next", Helvetica, sans-serif !default;
+
+/*-- scss:rules --*/
+
+// color classes
+
+#quarto-header > nav > div > div.navbar-brand-container.mx-auto > a:hover {
+  color: #93c54b;
+}
+
+#navbarCollapse > ul > li > a:hover {
+  color: #93c54b;
+}
+
+#navbarCollapse > ul > li > a.active {
+  color: #93c54b;
+}

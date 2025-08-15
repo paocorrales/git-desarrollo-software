@@ -1,0 +1,28 @@
+project:
+  type: website
+
+website:
+  title: "Desarrollando software en comunidad con git"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Inicio
+      - href: preparacion.qmd
+        text: "Preparación"
+      - href: presentation.qmd
+        text: "Comencemos!"
+      - text: "Materiales"
+        menu:
+          - href: 01_git-solo.qmd
+            text: "Git para trabajar individualmente"
+          - href: 02_git-equipo.qmd
+            text: "Git para trabajar en equipo"
+
+format:
+  html:
+    theme:
+      light: [sandstone, styles.scss]
+    toc: true
+
+editor: visual
+

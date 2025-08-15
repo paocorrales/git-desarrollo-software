@@ -83,7 +83,7 @@ Por ejemplo, puedes modificar archivos y hacer *commits* con esos cambios utiliz
 ## Configuración inicial
 
 Antes de crear tu primer repositorio es importante revisar que git esté configurado correctamente en tu computadora y que tengas permisos para modificar cosas en GitHub.
-Si seguiste las instrucciones [instrucciones previas al curso](A_instalacion.html) deberías tener todo listo, pero podemos revisar el estado de situación con `usethis::git_sitrep()` para comprobarlo.
+Si seguiste las instrucciones [instrucciones previas al curso](preparacion.html) deberías tener todo listo, pero podemos revisar el estado de situación con `usethis::git_sitrep()` para comprobarlo.
 
 ``` r
 > usethis::git_sitrep()
@@ -108,9 +108,11 @@ Si seguiste las instrucciones [instrucciones previas al curso](A_instalacion.htm
 
 Revisá que la información sea correcta y que `Personal access token for "https://github.com":` sea igual a `<discovered>`.
 Eso te garantizará que puedas trabajar con git y GitHub.
-Si vez alguna diferencia, es útil revisar las instrucciones de instalación en "" TODO: agregar link y titulo.
+Si vez alguna diferencia, es útil revisar las instrucciones de instalación en "[Lo que necesitas hacer antes del curso](preparacion.html)".
 
-## Creando un nuevo repositorio
+## Nuevo repositorio
+
+### GitHub repo primero, proyecto de RStudio despues
 
 Hay muchas formas de iniciar un nuevo repositorio, localmente en tu computadora utilizando la terminal, desde GitHub (o sus amigos) ¡o desde RStudio!.
 Aca te mostraremos cómo crear un repositorio desde GitHub, asociarlo a un proyecto de RStudio y trabajar con él.
@@ -126,7 +128,7 @@ A continuación completá la información del repositorio:
 
 -   Repository template: No template.
 -   Repository name: como quieras llamar a tu nuevo proyecto.
--   Description: Una descripción breve del proyecto. Escribila para los humanos.
+-   Description: Una descripción breve del proyecto. Escribila para que la entiendan personas.
 -   Visibilidad: Public.
 -   Initialize this repository with: nada (podemos configurarlo todo desde R).
 
@@ -149,6 +151,74 @@ La nueva carpeta en tu computadora será un repositorio git, vinculado a un repo
 Este flujo de trabajo también se asegura de que toda la configuración entre los repositorios local y remoto se realice correctamente.
 
 También agrega un archivo llamado `.gitignore` que incluye una lista de archivos que no queremos sumar al repositorio (por ejemplo `.Rhistory`).
+
+### Proyecto de RStudio primero, repositorio de GitHub después
+
+Supongamos que ya tenes un proyecto de RStudio existente y ahora que conoces todas las bondades del control de versiones queres empezar a usarlo. 
+
+Podemos utilizar el paquete _usethis_ para que nos ayude a empezar a versionar ese proyecto. 
+
+Para eso, primero tenes que asegurarte de que el proyecto ya sea un repositorio git.  Si tenes el tab de Git en RStudio entonces tu proyecto ya es un repositorio git. Si no lo es, podes usar la funcion `usethis::use_git()` para inicializarlo como un repositorio git.
+
+``` r
+> usethis::use_git()
+
+✔ Setting active project to "/Users/yabellini/Documents/GitHub/ControlDeVersiones".
+✔ Initialising Git repo.
+✔ Adding ".Rproj.user", ".Rhistory", ".Rdata", ".httr-oauth", ".DS_Store", and ".quarto" to
+  .gitignore.
+ℹ There are 2 uncommitted files:
+• .gitignore
+• ControlDeVersiones.Rproj
+! Is it ok to commit them?
+
+1: Not now
+2: Negative
+3: Yes
+
+```
+Cuando elegimos la opcion afirmativa nos mostrara un mensaje como el siguiente:
+
+``` r
+✔ Adding files.
+✔ Making a commit with message "Initial commit".
+A restart of RStudio is required to activate the Git pane.
+Restart now?
+
+1: Not now
+2: Nope
+3: Yeah
+```
+
+
+El siguiente paso es asociar el repositorio local con un repositorio remoto en GitHub. Para eso se usa la funcion `usethis::use_github()`.
+
+``` r
+> usethis::use_github()
+
+ℹ Defaulting to "https" Git protocol.
+✔ Setting active project to "/Users/yabellini/Documents/GitHub/ControlDeVersiones".
+✔ Creating GitHub repository "yabellini/ControlDeVersiones".
+✔ Setting remote "origin" to "https://github.com/yabellini/ControlDeVersiones.git".
+✔ Pushing "main" branch to GitHub and setting "origin/main" as upstream branch.
+✔ Opening URL <https://github.com/yabellini/ControlDeVersiones>.
+
+```
+
+Esta funcion toma un proyecto local y realiza una serie de chequeos y acciones, entre las cuales se encuentran:
+
+- Verificar que el proyecto ya es un repositorio Git.
+
+- Chequear que la rama actual es la rama predeterminada, por ejemplo, _main_.
+
+- Verificar que no hay ningún origen remoto preexistente.
+
+- Crear un repositorio asociado en GitHub.
+
+- Añadir ese repositorio de GitHub a tu repositorio local como origen remoto.
+
+- Realiza un _push_ inicial a GitHub para sincronizar repos.
+
 
 ## Cambios locales
 
@@ -234,3 +304,9 @@ La mayoría de las veces RStudio mostrará el mensaje "Already up to date", pero
     Github tiene atajos para agregar Código de Conducta facilmente.
 
 -   *Issues.* Te permiten gestionar el proyecto, discutir problemas y mejoras con otras personas.
+
+::: callout-tip
+## Mas detalle
+
+En los talleres de Desarrollo de Paquetes de R veremos como agregar todas estas partes del repositorio en R y con foco en un paquete de R.
+:::

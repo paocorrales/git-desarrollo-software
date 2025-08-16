@@ -148,15 +148,15 @@ Ya tenés tu repositorio online!
 4.  Selecciona "Open in new session".
 5.  Y hacé clic en "Create Project".
 
-## Commit local changes
+## Confirmar cambios locales
 
-1.  Create a new RMarkdown file and save it.
-2.  Add it to the staging area and commit the file. You'll need to add a descriptive message!
-3.  Make a change on the file, it can be anything. Save it.
-4.  Repeat step 2.
-5.  Now push!
+1.  Creá un nuevo archivo RMarkdown y guardalo.
+2.  Agregalo al área de preparación con *add* y luego hace un *commit*. ¡Vas a tener que pensar un mensaje descriptivo!
+3.  Hace un cambio en el archivo, puede ser cualquier cosa. Guardalo.
+4.  Repetí el paso 2.
 
-## Making remote changes
+
+## Haciendo cambios remotos
 
 1.  On the main repository page, click on the green bottom that says "Add a README".
 2.  Add something to the file. READMEs usually are written in Markdown and contain information about the repo.

@@ -148,72 +148,44 @@ Ya tenés tu repositorio online!
 4.  Selecciona "Open in new session".
 5.  Y hacé clic en "Create Project".
 
+## Primero Proyecto de RStudio, luego github
+
+Supongamos que ya tenes un proyecto de RStudio y queres empezar a usar git y GitHub:
+
+1. Crea un nuevo proyecto de RStudio 
+   - `File \> New Project \> New Directory \> New Project`. **No** selecciones la opcion "Create a new git repository".
+
+2. Usa `usethis::use_git()` para asegurarte que el proyecto tiene un repositorio git.
+
+3. Usa la funcion `usethis::use_github()` para asociar el repositorio local con un repositorio remoto en GitHub.
+
+4. Chequea en tu GitHub que el nuevo repo con el nombre del proyecto exista. 
+
+# Trabajando en proyectos que tienen control de versiones
+
 ## Confirmar cambios locales
+
+Trabajemos en cualquiera de los dos proyectos que creaste.
 
 1.  Creá un nuevo archivo RMarkdown y guardalo.
 2.  Agregalo al área de preparación con *add* y luego hace un *commit*. ¡Vas a tener que pensar un mensaje descriptivo!
 3.  Hace un cambio en el archivo, puede ser cualquier cosa. Guardalo.
 4.  Repetí el paso 2.
-
+5.  Ahora, hacé *push* para enviar los commits al repositorio remoto utilizando el botón con la flecha verde apuntando hacia arriba.
 
 ## Haciendo cambios remotos
 
-1.  On the main repository page, click on the green bottom that says "Add a README".
-2.  Add something to the file. READMEs usually are written in Markdown and contain information about the repo.
-3.  At the end of the page add a message on the first line and click on "Commit changes...".
-4.  Come back to the main page to see the README.
+1.  En la página principal, hacé click en el botón verde que dice "Add a README".
+2.  Agregá algo en el archivo. Los README suelen estar escritos en Markdown y contienen información sobre el repositorio.
+3.  Al final de la página añadí un mensaje y hacé click en "Confirm changes...".
+4.  Volvé a la página principal para ver el README.
 
-## Getting remote changes
+## Obtener cambios remotos
 
-1.  Go back to RStudio.
-2.  To the the Git pane.
-3.  Click on the light blue arrow that says "Pull".
-4.  Check the README file on the Files tab.
+1.  Volvé a RStudio.
+2.  Revisá panel de Git.
+3.  Hacé click en la flecha azul que dice "Pull".
+4.  Revisá el archivo README en la pestaña Archivos.
 
-------------------------------------------------------------------------
 
-## Working with others
 
-![Concep model of the remote workflow. A foreign remote repository can be forked to an owned remote repository with a "fork". The remote repository is copied into a local repository with a "clone". Files inside the local repository and the remote repository are synced with push and pull. The owned remote repository can be merged into the foreign remote repository with a pull request.](images/pull-request.png)
-
-## Planting trees
-
-### Fork the repository
-
-1.  Go to [github.com/paocorrales/flametree_gallery](https://github.com/paocorrales/flametree_gallery)
-2.  Fork the repository using the "Fork" button on the top right corner.
-
-Now, you have a copy of the repo in your GitHub account.
-
-3.  Copy the url of the repo and clone it to your computer
-
-## Planting trees
-
-### Make a change in the repo
-
-1.  Make a copy of the `template_script.R` file and change it's name to `<your-name.R>`
-
-2.  Change the value of the first 3 variables in the script:
-
-    -   `name` your name.
-    -   `seed` there are some random things happening there.
-    -   `shades` choose 4 colors that you like.
-
-You can run the code if you want :)
-
-3.  Save the file, **add** it to the staging area and **commit** it (*include only the .R file you created*).
-4.  Push it to your remote repository.
-
-## Planting trees
-
-### Make a pull request
-
-1.  Go to your repo in GitHub, you will see that you made the last commit and a message like this:
-
-![](images/pr1.png){fig-align="center" width="783"}
-
-2.  Click on "Open pull request".
-3.  And click on "Create pull request".
-4.  We are almost there. Complete the pull request with a title and a message and then finish the PR.
-
-And that's it!

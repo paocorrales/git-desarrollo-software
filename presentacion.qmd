@@ -52,77 +52,101 @@ knitr::include_graphics("images/add3.png")
 :::
 
 ::: {.column width="50%"}
-Git from the terminal
+Git desde la consola
 
 ```{r}
 #| echo: false
-#| fig-alt: "Screenshot of the terminal."
+#| fig-alt: "Captura de pantalla con la consola y el paquete usethis en uso."
 
-knitr::include_graphics("images/terminal.png")
+knitr::include_graphics("images/consola.png")
 ```
 :::
 :::
 
 ------------------------------------------------------------------------
 
-Do you have something like this in your computer?
+Tienen algo asi en su computadora?
 
 ```         
 /home/pao/Documents/thesis
-├── abstract.R
-├── thesis.Rmd
-├── thesis_reviwed.Rmd
-├── thesis_reviwed2.Rmd
-├── thesis_final.Rmd
-├── thesis_finalfinal.Rmd
-├── this_is_it.Rmd
-├── now_this_is_it_for_real_this_time_i_swear.Rmd
+├── resumen.R
+├── tesis.Rmd
+├── tesis_revisada.Rmd
+├── tesis_revisada2.Rmd
+├── tesis_final.Rmd
+├── tesis_finalfinal.Rmd
+├── esta_es_la_final.Rmd
+├── ahora_si_esta_es_la_final_en_serio_definitivo.Rmd
 └── FINAL.Rmd
 ```
 
 ------------------------------------------------------------------------
 
-## Control version cycle
+## Ciclo del control decversiones
 
-![The figure shows the states of a file: untracked or tracked. When it is tracked by the repository, the file can be staged, committed or modified. With the add action the file is "staged", with the commit action the file is "saved" to the repository. This cycles repeats teach time the file is modified.](images/file_cycle2.png)
+![La figura muestra los estados de un archivo: sin rastrear o rastreado. Cuando es rastreado por el repositorio, el archivo puede ser preparado, confirmado o modificado. Con la acción «add, añadir», el archivo se «prepara, staged», y con la acción «commit, confirmar», el archivo se «guarda» en el repositorio. Este ciclo se repite cada vez que se modifica el archivo.](images/file_cycle2.png)
 
 ------------------------------------------------------------------------
 
-## Our workflow
+## Nuestro flujo de trabajo
 
-![Concept model of a workflow using RStudio projects and git. Files are added to the staging area, and then committed to the local repository. You can push commits to the remote repository and pull new commits to your computer.](images/local_remote.png)
+![Modelo conceptual de un flujo de trabajo utilizando proyectos de RStudio y git. Los archivos se añaden al área de preparación y a continuación se envían al repositorio local. Puede enviar los cambios al repositorio remoto y descargar los nuevos cambios a su ordenador.](images/local_remote.png)
 
-## Introduce yourself to git
+## Chequear que todo esta listo
+
+``` r
+> usethis::git_sitrep()
+
+── Git global (user) 
+• Name: "Pao Corrales"
+• Email: "micorreo@gmail.com"
+• Global (user-level) gitignore file: ~/.gitignore
+• Vaccinated: TRUE
+• Default Git protocol: "https"
+• Default initial branch name: "main"
+
+── GitHub user 
+• Default GitHub host: "https://github.com"
+• Personal access token for "https://github.com": <discovered>
+• GitHub user: "paocorrales"
+• Token scopes: "gist", "repo", "user", and "workflow"
+• Email(s): "micorreo@gmail.com (primary)", "paocorrales@users.noreply.github.com", and
+  "otro correo@gmail.com"
+ℹ No active usethis project.
+```
+
+## Presentate a git
 
 ``` r
 library(usethis) 
-use_git_config(user.name = "Jane Doe",  # Your name!
-               user.email = "jane@example.org")  # Your email (the one you use on GitHub)
+use_git_config(user.name = "Juana Perez",  # Tu nombre
+               user.email = "juana@example.org")  # Tu email (el que usaste en GitHub)
 ```
 
-## Create an online repository
+## Crea un repositorio online
 
-1.  Go to github.com and log in.
-2.  On the top right corner, click on the "+" bottom and then "New repository"
-3.  Then:
-    -   Repository template: No template.
+1. Entrá en [github.com](https://github.com) e inicia sesión.
+2. En la esquina superior derecha, hacé click en el botón "+" y luego en "New repository".
 
-    -   Repository name: myrepo or whatever you wish to name your new project.
+A continuación completá la información del repositorio:
 
-    -   Description: Any short description of the project. Write this for humans.
+-   Repository template: No template.
+-   Repository name: como quieras llamar a tu nuevo proyecto.
+-   Description: Una descripción breve del proyecto. Escribila para que lo entiendas las personas.
+-   Visibilidad: Public.
+-   Initialize this repository with: nada (podemos configurarlo todo desde R).
 
-    -   Public.
+Antes de volver a RStudio, copia la url del repositorio. Por ejemplo `https://github.com/paocorrales/myrepo.git`
 
-    -   Initialize this repository with: nothing (we can set up everything from R).
+Ya tenés tu repositorio online!
 
-Before going back to RStudio, copy the url for the repository. For example https://github.com/paocorrales/myrepo.git
+## Clonar el repositorio de forma local usando RStudio.
 
-## Clone the repository locally.
-
-1.  File \> New Project \> Version Control \> Git. In the "repository URL" paste the URL of your new GitHub repository https://github.com/paocorrales/myrepo.git.
-2.  Choose the folder where you want to create the project.
-3.  Choose "Open in new session".
-4.  And Click on "Create Project".
+1.  En RStudio inicia un nuevo proyecto: File \> New Project \> Version Control \> Git. 
+2. En la "URL del repositorio" pegá la URL de tu nuevo repositorio de GitHub, tiene que tener esta pinta: `https://github.com/paocorrales/myrepo.git`.
+3.  Elejí la carpeta en tu disco donde querés crear el proyecto.
+4.  Selecciona "Open in new session".
+5.  Y hacé clic en "Create Project".
 
 ## Commit local changes
 

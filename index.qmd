@@ -4,24 +4,32 @@ title: "Hola 👋"
 
 Es un curso de 2 encuentros de 2 horas cada uno sobre cómo utilizar **Git** y **GitHub** para desarrollar de forma colaborativa software de código abierto con R, es decir, paquetes de R!
 
-La primera versión de estos materiales fue desarrolada para el curso [An R reproducibility toolkit for the practical researcher](https://reproducibility.rocks/), se adaptó para para el [programa de Campeones y campeonas](https://ropensci.org/champions/) de [rOpenSci](https://ropensci.org/) en 2023, para [RLadies Salzburg en 2024](https://www.meetup.com/rladies-salzburg/events/302141143/) y para el programa Champions de rOpenSci en 2024.
+La primera versión de estos materiales fue desarrolada para el curso [An R reproducibility toolkit for the practical researcher](https://reproducibility.rocks/), se adaptó para para el [programa de Campeones y Campeonas](https://ropensci.org/champions/) de [rOpenSci](https://ropensci.org/) en 2023 y 2024, tambien para [RLadies Salzburg en 2024](https://www.meetup.com/rladies-salzburg/events/302141143/).
+Algunos de los materiales tambien son parte de la materia [Introduccion a la Programacion II](https://intro-programacion.netlify.app), de la carrera en Ciencia de Datos de la Universidad Austral.
 
-Antes del curso, por favor, visita la sección ["Preparación"](prepacion.html) y seguí las instrucciones. Necesitarás instalar y configurar git y GitHub para participar activamente en el curso.
+Antes del curso, por favor, visita la sección ["Preparación"](prepacion.html) y seguí las instrucciones.
+Necesitarás instalar y configurar git y GitHub para participar activamente en el curso.
 
-![Ilustración de Alison Horst](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/68739659-fb6f-41e8-9813-32e1de3d82c0_rw_1920.png?h=4b046efe7664ab833358c241b10bd8e6){fig-align=«center» width="500"}
+![Ilustración de Alison Horst](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/68739659-fb6f-41e8-9813-32e1de3d82c0_rw_1920.png?h=4b046efe7664ab833358c241b10bd8e6){fig-align="center" width="500"}
 
 ### Instructoras/es
 
-**Paola Corrales:** Fue campeona en el programa de campeones de rOpenSci en 2023. Es formadora e instructora de The Carpentries y parte de su directorio. Forma parte de R-Ladies, R Forwards y LatinR. Ahora en Ingeniera de Software para la investigación aplicada al estudio del clima y el tiempo.
+**Paola Corrales:** Fue campeona en el programa de campeones de rOpenSci en 2023.
+Es formadora e instructora de The Carpentries y parte de su directorio.
+Forma parte de R-Ladies, R Forwards y LatinR.
+Ahora en Ingeniera de Software para la investigación aplicada al estudio del clima y el tiempo.
 
 **Yanina Bellini Saibene:** Community manager de rOpenSci.
+Formadora e instructora de The Carpentries y presidenta de su directorio.
+Tambien es instructora certificada de RStudio.
+Es parte del directorio de R-Ladies y del Comite de Infraestructura del RConsortium.
+Co-Chair de LatinR.
+Docente de la Universidad Austral.
 
-Formadora e instructora de The Carpentries e instructora certificada de RStudio.
-
-Parte del equipo de R-Ladies.
-
-**Elio Campitelli**: Investiga sobre el hielo marino en la Universidad Monash en Melbourne Australia. Instructore de The Carpentries y por segunda vez mentore en el programa de campeones y campeonas de ROpenSci. Desarrolla paquetes de R en su tiempo libre.
+**Elio Campitelli**: Investiga sobre el hielo marino en la Universidad Monash en Melbourne Australia.
+Instructore de The Carpentries y por segunda vez mentore en el programa de campeones y campeonas de rOpenSci.
+Desarrolla paquetes de R en su tiempo libre.
 
 ### Licencia
 
-<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Licencia Creative Commons" style="border-width:0"/></a><br / > Todos los materiales de este curso están bajola licencia \<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"><img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Licencia Creative Commons" style="border-width:0"/></a><br / > Todos los materiales de este curso están bajola licencia \<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES"\>Creative Commons Attribution-ShareAlike 4.0 International License</a>.

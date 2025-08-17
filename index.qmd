@@ -10,7 +10,7 @@ Algunos de los materiales tambien son parte de la materia [Introduccion a la Pro
 Antes del curso, por favor, visita la sección ["Preparación"](prepacion.html) y seguí las instrucciones.
 Necesitarás instalar y configurar git y GitHub para participar activamente en el curso.
 
-![Ilustración de Alison Horst](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/68739659-fb6f-41e8-9813-32e1de3d82c0_rw_1920.png?h=4b046efe7664ab833358c241b10bd8e6){fig-align="«center»" width="500"}
+![Ilustración de Alison Horst](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/68739659-fb6f-41e8-9813-32e1de3d82c0_rw_1920.png?h=4b046efe7664ab833358c241b10bd8e6){fig-align="center" width="500"}
 
 ### Instructoras/es
 

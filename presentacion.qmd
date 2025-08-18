@@ -82,7 +82,7 @@ Tienen algo asi en su computadora?
 
 ------------------------------------------------------------------------
 
-## Ciclo del control decversiones
+## Ciclo del control de versiones
 
 ![La figura muestra los estados de un archivo: sin rastrear o rastreado. Cuando es rastreado por el repositorio, el archivo puede ser preparado, confirmado o modificado. Con la acción «add, añadir», el archivo se «prepara, staged», y con la acción «commit, confirmar», el archivo se «guarda» en el repositorio. Este ciclo se repite cada vez que se modifica el archivo.](images/file_cycle2.png)
 

@@ -10,7 +10,7 @@ website:
         text: Inicio
       - href: preparacion.qmd
         text: "Preparación"
-      - href: presentation.qmd
+      - href: presentacion.qmd
         text: "Comencemos!"
       - text: "Materiales"
         menu:

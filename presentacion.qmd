@@ -1,0 +1,123 @@
+---
+title: "Desarrollando Software en Comunidad"
+format: 
+  revealjs:
+    theme: default
+    self-contained: true
+    fontsize: "18.5pt"
+---
+
+# Hola!  Les damos la bienvenida
+
+
+------------------------------------------------------------------------
+
+## Sobre este taller
+
+::: columns
+::: {.column width="40%"}
+- Por qué usar git
+- Cómo usar git (y GitHub)
+- Cómo trabajar con git en el contexto de escribir código R
+- Cómo colaborar con otras personas.
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+#| fig-alt: "Ilustración de Alison Horst que muestra el directorio de trabajo (como un edificio), cómo se añaden los archivos al área de preparación (staging) y se envían al repositorio local (otro edificio). Los envíos se transfieren y se extraen del repositorio remoto (un edificio diferente), todos conectados con flechas."
+
+knitr::include_graphics("https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/68739659-fb6f-41e8-9813-32e1de3d82c0_rw_1920.png?h=4b046efe7664ab833358c241b10bd8e6")
+```
+:::
+:::
+
+
+------------------------------------------------------------------------
+
+Tienen algo asi en su computadora?
+
+```         
+/home/pao/Documents/thesis
+├── resumen.R
+├── tesis.Rmd
+├── tesis_revisada.Rmd
+├── tesis_revisada2.Rmd
+├── tesis_final.Rmd
+├── tesis_finalfinal.Rmd
+├── esta_es_la_final.Rmd
+├── ahora_si_esta_es_la_final_en_serio_definitivo.Rmd
+└── FINAL.Rmd
+```
+
+------------------------------------------------------------------------
+
+## Ciclo del control de versiones
+
+![La figura muestra los estados de un archivo: sin rastrear o rastreado. Cuando es rastreado por el repositorio, el archivo puede ser preparado, confirmado o modificado. Con la acción «add, añadir», el archivo se «prepara, staged», y con la acción «commit, confirmar», el archivo se «guarda» en el repositorio. Este ciclo se repite cada vez que se modifica el archivo.](images/file_cycle2.png)
+
+------------------------------------------------------------------------
+
+## Nuestro flujo de trabajo
+
+![Modelo conceptual de un flujo de trabajo utilizando proyectos de RStudio y git. Los archivos se añaden al área de preparación y a continuación se envían al repositorio local. Puede enviar los cambios al repositorio remoto y descargar los nuevos cambios a su ordenador.](images/local_remote.png)
+
+## Chequear que todo esta listo
+
+``` r
+> usethis::git_sitrep()
+
+── Git global (user) 
+• Name: "Pao Corrales"
+• Email: "micorreo@gmail.com"
+• Global (user-level) gitignore file: ~/.gitignore
+• Vaccinated: TRUE
+• Default Git protocol: "https"
+• Default initial branch name: "main"
+
+── GitHub user 
+• Default GitHub host: "https://github.com"
+• Personal access token for "https://github.com": <discovered>
+• GitHub user: "paocorrales"
+• Token scopes: "gist", "repo", "user", and "workflow"
+• Email(s): "micorreo@gmail.com (primary)", "paocorrales@users.noreply.github.com", and
+  "otro correo@gmail.com"
+ℹ No active usethis project.
+```
+
+## Usando git y GitHub con RStudio
+
+Supongamos que ya tenes un proyecto de RStudio y queres empezar a usar git y GitHub:
+
+1. Crea un nuevo proyecto de RStudio 
+   - `File \> New Project \> New Directory \> New Project`. **No** selecciones la opcion "Create a new git repository".
+
+2. Usa `usethis::use_git()` para asegurarte que el proyecto tiene un repositorio git.
+
+3. Usa la funcion `usethis::use_github()` para asociar el repositorio local con un repositorio remoto en GitHub.
+
+4. Chequea en tu GitHub que el nuevo repo con el nombre del proyecto exista. 
+
+# Trabajando en proyectos que tienen control de versiones
+
+## Confirmar cambios locales
+
+1.  Creá un nuevo archivo RMarkdown y guardalo.
+2.  Agregalo al área de preparación con *add* y luego hace un *commit*. ¡Vas a tener que pensar un mensaje descriptivo!
+3.  Hace un cambio en el archivo, puede ser cualquier cosa. Guardalo.
+4.  Repetí el paso 2.
+5.  Ahora, hacé *push* para enviar los commits al repositorio remoto utilizando el botón con la flecha verde apuntando hacia arriba.
+
+## Haciendo cambios remotos
+
+1.  En la página principal, hacé click en el botón verde que dice "Add a README".
+2.  Agregá algo en el archivo. Los README suelen estar escritos en Markdown y contienen información sobre el repositorio.
+3.  Al final de la página añadí un mensaje y hacé click en "Confirm changes...".
+4.  Volvé a la página principal para ver el README.
+
+## Obtener cambios remotos
+
+1.  Volvé a RStudio.
+2.  Revisá panel de Git.
+3.  Hacé click en la flecha azul que dice "Pull".
+4.  Revisá el archivo README en la pestaña Archivos.

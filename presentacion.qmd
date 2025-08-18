@@ -35,36 +35,6 @@ knitr::include_graphics("https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b14
 
 ------------------------------------------------------------------------
 
-## Cómo usar Git
-
-Elije tu propia aventura:
-
-::: columns
-::: {.column width="50%"}
-Git desde Rstudio
-
-```{r}
-#| echo: false
-#| fig-alt: "Captura de pantalla del IDE RStudio para git. Muestra dos archivos añadidos al área de staging y el espacio para escribir el mensaje de commit."
-
-knitr::include_graphics("images/add3.png")
-```
-:::
-
-::: {.column width="50%"}
-Git desde la consola
-
-```{r}
-#| echo: false
-#| fig-alt: "Captura de pantalla con la consola y el paquete usethis en uso."
-
-knitr::include_graphics("images/consola.png")
-```
-:::
-:::
-
-------------------------------------------------------------------------
-
 Tienen algo asi en su computadora?
 
 ```         
@@ -115,40 +85,7 @@ Tienen algo asi en su computadora?
 ℹ No active usethis project.
 ```
 
-## Presentate a git
-
-``` r
-library(usethis) 
-use_git_config(user.name = "Juana Perez",  # Tu nombre
-               user.email = "juana@example.org")  # Tu email (el que usaste en GitHub)
-```
-
-## Crea un repositorio online
-
-1. Entrá en [github.com](https://github.com) e inicia sesión.
-2. En la esquina superior derecha, hacé click en el botón "+" y luego en "New repository".
-
-A continuación completá la información del repositorio:
-
--   Repository template: No template.
--   Repository name: como quieras llamar a tu nuevo proyecto.
--   Description: Una descripción breve del proyecto. Escribila para que lo entiendas las personas.
--   Visibilidad: Public.
--   Initialize this repository with: nada (podemos configurarlo todo desde R).
-
-Antes de volver a RStudio, copia la url del repositorio. Por ejemplo `https://github.com/paocorrales/myrepo.git`
-
-Ya tenés tu repositorio online!
-
-## Clonar el repositorio de forma local usando RStudio.
-
-1.  En RStudio inicia un nuevo proyecto: File \> New Project \> Version Control \> Git. 
-2. En la "URL del repositorio" pegá la URL de tu nuevo repositorio de GitHub, tiene que tener esta pinta: `https://github.com/paocorrales/myrepo.git`.
-3.  Elejí la carpeta en tu disco donde querés crear el proyecto.
-4.  Selecciona "Open in new session".
-5.  Y hacé clic en "Create Project".
-
-## Primero Proyecto de RStudio, luego github
+## Usando git y GitHub con RStudio
 
 Supongamos que ya tenes un proyecto de RStudio y queres empezar a usar git y GitHub:
 
@@ -164,8 +101,6 @@ Supongamos que ya tenes un proyecto de RStudio y queres empezar a usar git y Git
 # Trabajando en proyectos que tienen control de versiones
 
 ## Confirmar cambios locales
-
-Trabajemos en cualquiera de los dos proyectos que creaste.
 
 1.  Creá un nuevo archivo RMarkdown y guardalo.
 2.  Agregalo al área de preparación con *add* y luego hace un *commit*. ¡Vas a tener que pensar un mensaje descriptivo!
@@ -186,6 +121,3 @@ Trabajemos en cualquiera de los dos proyectos que creaste.
 2.  Revisá panel de Git.
 3.  Hacé click en la flecha azul que dice "Pull".
 4.  Revisá el archivo README en la pestaña Archivos.
-
-
-

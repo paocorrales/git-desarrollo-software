@@ -7,19 +7,18 @@ format:
     fontsize: "18.5pt"
 ---
 
-# Hola!  Les damos la bienvenida
-
+# Hola! Les damos la bienvenida
 
 ------------------------------------------------------------------------
 
 ## Sobre este taller
 
-::: columns
+::::: columns
 ::: {.column width="40%"}
-- Por qué usar git
-- Cómo usar git (y GitHub)
-- Cómo trabajar con git en el contexto de escribir código R
-- Cómo colaborar con otras personas.
+-   Por qué usar git
+-   Cómo usar git (y GitHub)
+-   Cómo trabajar con git en el contexto de escribir código R
+-   Cómo colaborar con otras personas.
 :::
 
 ::: {.column width="60%"}
@@ -30,8 +29,7 @@ format:
 knitr::include_graphics("https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/68739659-fb6f-41e8-9813-32e1de3d82c0_rw_1920.png?h=4b046efe7664ab833358c241b10bd8e6")
 ```
 :::
-:::
-
+:::::
 
 ------------------------------------------------------------------------
 
@@ -62,6 +60,11 @@ Tienen algo asi en su computadora?
 
 ![Modelo conceptual de un flujo de trabajo utilizando proyectos de RStudio y git. Los archivos se añaden al área de preparación y a continuación se envían al repositorio local. Puede enviar los cambios al repositorio remoto y descargar los nuevos cambios a su ordenador.](images/local_remote.png)
 
+
+## `add --> commmit --> push`
+
+![](images/add-commit-push.png)
+
 ## Chequear que todo esta listo
 
 ``` r
@@ -87,37 +90,40 @@ Tienen algo asi en su computadora?
 
 ## Usando git y GitHub con RStudio
 
-Supongamos que ya tenes un proyecto de RStudio y queres empezar a usar git y GitHub:
+Supongamos que estas arrancando un nuevo proyecto:
 
-1. Crea un nuevo proyecto de RStudio 
-   - `File \> New Project \> New Directory \> New Project`. **No** selecciones la opcion "Create a new git repository".
+1.  Crea un nuevo proyecto de RStudio
 
-2. Usa `usethis::use_git()` para asegurarte que el proyecto tiene un repositorio git.
+    -   `File \> New Project \> New Directory \> New Project`. **No** selecciones la opcion "Create a new git repository".
 
-3. Usa la funcion `usethis::use_github()` para asociar el repositorio local con un repositorio remoto en GitHub.
+2.  Usa `usethis::use_git()` para asegurarte que el proyecto tiene un repositorio git.
 
-4. Chequea en tu GitHub que el nuevo repo con el nombre del proyecto exista. 
+3.  Usa la funcion `usethis::use_github()` para asociar el repositorio local con un repositorio remoto en GitHub.
+
+4.  Chequea en tu GitHub que el nuevo repo con el nombre del proyecto exista.
 
 # Trabajando en proyectos que tienen control de versiones
 
-## Confirmar cambios locales
+## ✏️ Trabajando en el repo local
 
-1.  Creá un nuevo archivo RMarkdown y guardalo.
+1.  Creá un nuevo archivo (script, rmarkdown o quarto) y guardalo.
 2.  Agregalo al área de preparación con *add* y luego hace un *commit*. ¡Vas a tener que pensar un mensaje descriptivo!
 3.  Hace un cambio en el archivo, puede ser cualquier cosa. Guardalo.
 4.  Repetí el paso 2.
 5.  Ahora, hacé *push* para enviar los commits al repositorio remoto utilizando el botón con la flecha verde apuntando hacia arriba.
+6. En el repositorio remoto chequea que los cambios estén presentes en el archivo.
 
-## Haciendo cambios remotos
+## ✏️ Haciendo cambios remotos
 
-1.  En la página principal, hacé click en el botón verde que dice "Add a README".
-2.  Agregá algo en el archivo. Los README suelen estar escritos en Markdown y contienen información sobre el repositorio.
-3.  Al final de la página añadí un mensaje y hacé click en "Confirm changes...".
-4.  Volvé a la página principal para ver el README.
+1.  En GitHub navegá hasta encontrar el archivo que creaste recién. Entrá y hace click en el lapiz ("Edit this file") para editarlo.
+2.  Agregá un par de lineas de código o texto.
+3. Arriba a la derecha encontrarás un botón verde que dice "Commit changes...".
+4. Edita el mensaje del commit para que sea informativo y luego hace clic en "Commit changes"
+5. Revisá si los cambios se guardaron correctamente.
 
-## Obtener cambios remotos
+## ✏️ Sincronizando el repo remoto con el repo local
 
 1.  Volvé a RStudio.
 2.  Revisá panel de Git.
 3.  Hacé click en la flecha azul que dice "Pull".
-4.  Revisá el archivo README en la pestaña Archivos.
+4.  Revisá el archivo que modificaste en GitHub.

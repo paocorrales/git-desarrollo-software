@@ -32,21 +32,21 @@
     "href": "presentacion.html#usando-git-y-github-con-rstudio",
     "title": "Desarrollando Software en Comunidad",
     "section": "Usando git y GitHub con RStudio",
-    "text": "Usando git y GitHub con RStudio\nSupongamos que ya tenes un proyecto de RStudio y queres empezar a usar git y GitHub:\n\nCrea un nuevo proyecto de RStudio\n\nFile \\&gt; New Project \\&gt; New Directory \\&gt; New Project. No selecciones la opcion “Create a new git repository”.\n\nUsa usethis::use_git() para asegurarte que el proyecto tiene un repositorio git.\nUsa la funcion usethis::use_github() para asociar el repositorio local con un repositorio remoto en GitHub.\nChequea en tu GitHub que el nuevo repo con el nombre del proyecto exista."
+    "text": "Usando git y GitHub con RStudio\nSupongamos que estas arrancando un nuevo proyecto:\n\nCrea un nuevo proyecto de RStudio\n\nFile \\&gt; New Project \\&gt; New Directory \\&gt; New Project. No selecciones la opcion “Create a new git repository”.\n\nUsa usethis::use_git() para asegurarte que el proyecto tiene un repositorio git.\nUsa la funcion usethis::use_github() para asociar el repositorio local con un repositorio remoto en GitHub.\nChequea en tu GitHub que el nuevo repo con el nombre del proyecto exista."
   },
   {
     "objectID": "presentacion.html#confirmar-cambios-locales",
     "href": "presentacion.html#confirmar-cambios-locales",
     "title": "Desarrollando Software en Comunidad",
     "section": "Confirmar cambios locales",
-    "text": "Confirmar cambios locales\n\nCreá un nuevo archivo RMarkdown y guardalo.\nAgregalo al área de preparación con add y luego hace un commit. ¡Vas a tener que pensar un mensaje descriptivo!\nHace un cambio en el archivo, puede ser cualquier cosa. Guardalo.\nRepetí el paso 2.\nAhora, hacé push para enviar los commits al repositorio remoto utilizando el botón con la flecha verde apuntando hacia arriba."
+    "text": "Confirmar cambios locales\n\nCreá un nuevo archivo (script, rmarkdown o quarto) y guardalo.\nAgregalo al área de preparación con add y luego hace un commit. ¡Vas a tener que pensar un mensaje descriptivo!\nHace un cambio en el archivo, puede ser cualquier cosa. Guardalo.\nRepetí el paso 2.\nAhora, hacé push para enviar los commits al repositorio remoto utilizando el botón con la flecha verde apuntando hacia arriba.\nEn el repositorio remoto chequea que los cambios estén presentes en el archivo."
   },
   {
     "objectID": "presentacion.html#haciendo-cambios-remotos",
     "href": "presentacion.html#haciendo-cambios-remotos",
     "title": "Desarrollando Software en Comunidad",
-    "section": "Haciendo cambios remotos",
-    "text": "Haciendo cambios remotos\n\nEn la página principal, hacé click en el botón verde que dice “Add a README”.\nAgregá algo en el archivo. Los README suelen estar escritos en Markdown y contienen información sobre el repositorio.\nAl final de la página añadí un mensaje y hacé click en “Confirm changes…”.\nVolvé a la página principal para ver el README."
+    "section": "✏️ Haciendo cambios remotos",
+    "text": "✏️ Haciendo cambios remotos\n\nEn GitHub navegá hasta encontrar el archivo que creaste recién. Entrá y hace click en el lapiz (“Edit this file”) para editarlo.\nAgregá un par de lineas de código o texto.\nArriba a la derecha encontrarás un botón verde que dice “Commit changes…”.\nEdita el mensaje del commit para que sea informativo y luego hace clic en “Commit changes”\nRevisá si los cambios se guardaron correctamente."
   },
   {
     "objectID": "presentacion.html#obtener-cambios-remotos",
@@ -208,5 +208,26 @@
     "title": "Lo que necesitas hacer antes del curso",
     "section": "Configuración de Git y GitHub",
     "text": "Configuración de Git y GitHub\nAhora que ya tenés git instalado y una cuenta en GitHub, es importante completar la configuración necesaria para que puedas trabajar. Hay varias maneras de hacerlo, en este caso lo haremos desde R usando el paquete usethis y gitcreds.\n\nAbrí RStudio e instalá usethis corriendo el siguiente código en la consola:\n\ninstall.packages(\"usethis\")\n\nConfigurá tu nombre y correo electrónico:\n\nusethis::use_git_config(user.name = \"Juan Perez\",\n               user.email = \"juan@ejemplo.org\")\nSustituyéndolo por tu nombre y el correo electrónico asociado a tu cuenta de GitHub. git usará esta información para registrar quien hizo cambios en un archivo. Veremos esto durante los talleres de git y Github, desarrollo de paquetes y revision de código.\n\nConfigurá tu PAT\n\nEl PAT o “personal access token”, mejor conocido como token es una especie de contraseña que deberás setear en tu computadora para poder hacer cambios en GitHub.\nPrimero tendrás que crear el token:\nusethis::create_github_token()\nSe abrirá la ventana de GitHub y ahí tendrás que seguir los pasos para crear el token y copiarlo (muy importante!). Por las dudas no cierres esta ventana.\nAhora corré el siguiente código para setear el token en tu computadora:\ngitcreds::gitcreds_set()\nElegí crear/guardar el token. Si tenés Ubuntu esto no termina acá, tendrás que seguir los pasos en esta guia para guardar el token de manera permanente.\n\nVacuná tu instalación de git:\n\nusethis::git_vaccinate() \nEsta función agrega algunos archivos y configuraciones que se consideran buenas prácticas. Vamos a ver mas detalle durante el taller de desarrollo de paquetes. También podés leer la documentación de la función para aprender más.\n\nChequeá que todo esté en orden:\n\nusethis::git_sitrep() \nEsta función devuelve el estado de situación de tu configuración de git y GitHub. Revisá que aparezca tu nombre y mail, que aparezca Vaccinated: TRUE y que Personal access token for \"https://github.com\": &lt;discovered&gt; esté tal cual ese mensaje."
+  },
+  {
+    "objectID": "presentacion.html#add----commmit----push",
+    "href": "presentacion.html#add----commmit----push",
+    "title": "Desarrollando Software en Comunidad",
+    "section": "add --> commmit --> push",
+    "text": "add --&gt; commmit --&gt; push"
+  },
+  {
+    "objectID": "presentacion.html#trabajando-en-el-repo-local",
+    "href": "presentacion.html#trabajando-en-el-repo-local",
+    "title": "Desarrollando Software en Comunidad",
+    "section": "✏️ Trabajando en el repo local",
+    "text": "✏️ Trabajando en el repo local\n\nCreá un nuevo archivo (script, rmarkdown o quarto) y guardalo.\nAgregalo al área de preparación con add y luego hace un commit. ¡Vas a tener que pensar un mensaje descriptivo!\nHace un cambio en el archivo, puede ser cualquier cosa. Guardalo.\nRepetí el paso 2.\nAhora, hacé push para enviar los commits al repositorio remoto utilizando el botón con la flecha verde apuntando hacia arriba.\nEn el repositorio remoto chequea que los cambios estén presentes en el archivo."
+  },
+  {
+    "objectID": "presentacion.html#sincronizando-el-repo-remoto-con-el-repo-local",
+    "href": "presentacion.html#sincronizando-el-repo-remoto-con-el-repo-local",
+    "title": "Desarrollando Software en Comunidad",
+    "section": "✏️ Sincronizando el repo remoto con el repo local",
+    "text": "✏️ Sincronizando el repo remoto con el repo local\n\nVolvé a RStudio.\nRevisá panel de Git.\nHacé click en la flecha azul que dice “Pull”.\nRevisá el archivo que modificaste en GitHub."
   }
 ]
